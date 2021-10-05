@@ -19,8 +19,7 @@ def test():
 
 test()
 try:
-    y = int(
-        input('Введите год: '))
+    y = int(input('Введите год: '))
 except ValueError:
     print('\nОШИБКА: Вводите год в формате "ГГГГ"')
     exit()
@@ -29,4 +28,3 @@ if year_type(y) == True:
     print(f'\n{y}год - високосный')
 else:
     print(f'\n{y}год - невисокосный')
-
