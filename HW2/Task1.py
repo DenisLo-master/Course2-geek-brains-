@@ -1,5 +1,8 @@
 #1. Написать программу, которая будет складывать, вычитать, умножать или делить два числа. Числа и знак операции вводятся пользователем. После выполнения вычисления программа не должна завершаться, а должна запрашивать новые данные для вычислений. Завершение программы должно выполняться при вводе символа '0' в качестве знака операции. Если пользователь вводит неверный знак (не '0', '+', '-', '*', '/'), то программа должна сообщать ему об ошибке и снова запрашивать знак операции. Также сообщать пользователю о невозможности деления на ноль, если он ввел 0 в качестве делителя.
 
+
+
+
 # Блок-схема- алгоритм (открывать в google chrome) https://www.figma.com/file/IDqU18bTZyUfrze1cELTJU/HW2-Task1?node-id=0%3A1
 
 d1 = None
@@ -8,18 +11,6 @@ sing_oprn = str
 
 
 def test():
-    # assert digit('5') == 5, 'incorrect'
-    # assert digit('0.5') == 0.5, 'incorrect'
-    # assert digit('-0.5') == -0.5, 'incorrect'
-    # #assert digit('f') == None, 'incorrect'
-
-    # assert operation('+') == '+', 'incorrect'
-    # assert operation('-') == '-', 'incorrect'
-    # assert operation('*') == '*', 'incorrect'
-    # assert operation('/') == '/', 'incorrect'
-    # #assert operation('f') == False, 'incorrect'
-    # #assert operation('0') == exit(), 'incorrect'
-
     assert calculation(5, 7, '+') == 12, 'incorrect'
     assert calculation(5, 0, '+') == 5, 'incorrect'
     assert calculation(1, 7, '-') == -6, 'incorrect'
