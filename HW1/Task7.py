@@ -18,9 +18,9 @@ def triangle_type(a, b, c):
   
 
 def test():
-    assert triangle_type(3,4,5)=='\nТреугольник - раЗносторонний', 'icorrect'
-    assert triangle_type(3,3,5)=='\nТреугольник - равнобедренный', 'icorrect'
-    assert triangle_type(5,5,5)=='\nТреугольник - раВносторонний', 'icorrect'
+    assert triangle_type(3,4,5)=='\nТреугольник - раЗносторонний', 'incorrect'
+    assert triangle_type(3,3,5)=='\nТреугольник - равнобедренный', 'incorrect'
+    assert triangle_type(5,5,5)=='\nТреугольник - раВносторонний', 'incorrect'
     #assert triangle_type(1,1,5)==False, 'icorrect'
     print(f'Test: OK\n')
 
