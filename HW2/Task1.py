@@ -33,7 +33,7 @@ def digit(value):
         else:
             d2 = value
             print(f'\nРешение: {calculation(d1,d2,sign_oprn)}')
-            d1 = None
+            d1, d2 = None, None
             digit(input('\n-------\nВведите первое число: \n'))
     except ValueError:
         digit(input('\nОШИБКА: Введите только число: \n'))
