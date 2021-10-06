@@ -16,7 +16,7 @@ def test():
     assert calculation(5, 7, '*') == 35, 'incorrect'
     assert calculation(15, 3, '/') == 5, 'incorrect'
     assert 2.857 <= calculation(20, 7, '/') <= 2.858, 'incorrect'
-    #assert calculation(3, 0, '/')==False, 'incorrect'
+    assert calculation(3, 0, '/')==f'Деление на 0 невозможно\n', 'incorrect'
     print(f'Test: OK\n')
 
 
