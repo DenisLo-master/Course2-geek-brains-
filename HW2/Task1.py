@@ -31,7 +31,7 @@ def digit(value):
             d2 = value
             print(f'\nРешение: {calculation(d1, d2, sign_oprn)}')
             d1, d2 = None, None
-            digit(input('\n-------\nВведите первое число: \n'))
+            return
     except ValueError:
         digit(input('\nОШИБКА: Введите только число: \n'))
 
@@ -67,4 +67,5 @@ def calculation(d1, d2, sign_oprn):
 
 test()
 
-digit(input('Введите первое число: \n'))
+while True:
+    digit(input('\n-------\nВведите первое число: \n'))
