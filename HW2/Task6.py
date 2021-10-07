@@ -1,5 +1,8 @@
 #6. В программе генерируется случайное целое число от 0 до 100. Пользователь должен его отгадать не более чем за 10 попыток. После каждой неудачной попытки должно сообщаться больше или меньше введенное пользователем число, чем то, что загадано. Если за 10 попыток число не отгадано, то вывести загаданное число.
 
+# Блок-схема- алгоритм (открывать в google chrome) 
+# https://www.figma.com/file/cBtZ7YOB2ZaCfpSHqUA22V/HW2-Task6?node-id=0%3A1
+
 from random import randint
 
 
@@ -10,7 +13,6 @@ def test():
     assert guess(
         33, 5,
         '33') == '\nПоздравляю, ты угадал число, c 6-й попытки', 'incorrect'
-
     # assert guess(
     #     15, 8, '30') == f'\nВаше число больше. Осталось попыток: 7', 'incorrect'
     # assert guess(
@@ -39,12 +41,12 @@ def guess(f_value, attempts, value):
         value = int(value)
         if left_b <= value <= right_b:
             if value == f_value:
-                result=f'\nПоздравляю, ты угадал число, c {11-attempts}-й попытки'
+                return f'\nПоздравляю, ты угадал число, c {11-attempts}-й попытки'
             elif value < f_value and attempts > 1:
                 left_b = value
                 attempts -= 1
                 print(f'\nВаше число меньше. Осталось попыток: {attempts}')
-                guess(
+                return guess(
                     f_value, attempts,
                     input(
                         f'\nТекущий Диапазон: {left_b} - {right_b}\nУгадайтее число: \n'
@@ -53,34 +55,38 @@ def guess(f_value, attempts, value):
                 right_b = value
                 attempts -= 1
                 print(f'\nВаше число больше. Осталось попыток: {attempts}')
-                guess(
+                return guess(
                     f_value, attempts,
                     input(
                         f'\nТекущий Диапазон: {left_b} - {right_b}\nУгадайтее число: \n'
                     ))
             else:
-                result=f'\nК сожалению, ты не угадал число, попытки закончились'
-        elif result != '':
-            print(result)
-            exit()
+                return f'\nК сожалению, ты не угадал число, попытки закончились'
         else:
             raise ValueError
     except ValueError:
         attempts -= 1
-        guess(
-            f_value, attempts,
-            input(
-                f'\nОсталось попыток: {attempts}\nОШИБКА: введите число в текущеем диапазоне {left_b} - {right_b}\n'
-            ))
+        if attempts > 0:
+            return guess(
+                f_value, attempts,
+                input(
+                    f'\nОсталось попыток: {attempts}\nОШИБКА: введите число в текущеем диапазоне {left_b} - {right_b}\n'
+                ))
+        else:
+            return f'\nК сожалению, ты не угадал число, попытки закончились'
+            
 
 
 left_b = 0
 right_b = 100
-attempts = 2
+attempts = 10
 f_value = int
-result=''
+result = ''
 rand_value(left_b, right_b)
 
-#test()
-print(guess(f_value, attempts,
-      input(f'\nТекущий Диапазон: {left_b} - {right_b}\nУгадайтее число: \n')))
+test()
+print(
+    guess(
+        f_value, attempts,
+        input(
+            f'\nТекущий Диапазон: {left_b} - {right_b}\nУгадайтее число: \n')))
