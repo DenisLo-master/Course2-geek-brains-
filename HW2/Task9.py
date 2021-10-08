@@ -1,5 +1,6 @@
 #9. Среди натуральных чисел, которые были введены, найти наибольшее по сумме цифр. Вывести на экран это число и сумму его цифр.
 
+# Блок-схема- алгоритм (открывать в google chrome) https://www.figma.com/file/4JKpq2355IVJeax2BC1sNl/HW2-Task9?node-id=0%3A1
 
 def test():
     assert calculate(
