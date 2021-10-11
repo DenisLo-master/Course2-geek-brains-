@@ -1,5 +1,7 @@
 #1. В диапазоне натуральных чисел от 2 до 99 определить, сколько из них кратны каждому из чисел в диапазоне от 2 до 9.
 
+# Блок-схема- алгоритм (открывать в google chrome) 
+# https://www.figma.com/file/OHXDhFDLAeqTMVML2Qb5gP/HW3-Task1?node-id=0%3A1
 
 def test():
     assert multiple_digit(
