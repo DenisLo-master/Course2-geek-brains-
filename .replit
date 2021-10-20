@@ -1,2 +1,2 @@
 3language = "python3"
-run = "python HW5/Task1.py"
+run = "python HW5/Task2.py"
