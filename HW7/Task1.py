@@ -44,9 +44,11 @@ def sort_bubble2(list_2):
 #lst = [10, 20, 30, 40, 50, 60, 70, 80]
 #lst = [70, 80, 60, 50, 40, 30, 20, 10]
 lst = [randint(-100, 100) for i in range(0, 500)]
-#print(lst)
 
-print('-' * 20)
+
+print(lst)
+
+print('\n','/' * 40,'\n')
 
 list_1 = lst.copy()
 list_2 = lst.copy()
