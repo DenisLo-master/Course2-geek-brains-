@@ -1,2 +1,3 @@
+
 3language = "python3"
 run = "python HW7/Task1.py"
