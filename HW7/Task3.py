@@ -31,7 +31,6 @@ test()
 m = randint(1, 5)
 lst = [randint(0, 50) for i in range(0, (2 * m + 1))]
 
-A=[0,0,0,0,0]
 print(lst)
 print(f'Медиана: {median(lst)}')
 
