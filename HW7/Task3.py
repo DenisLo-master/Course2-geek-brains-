@@ -3,9 +3,9 @@
 from random import randint
 
 def test():
-    assert median([0, 100, 5, 9, 8, 6, 2])==6,'incorrect'
-    assert median([0, 1, 1, 1, 3, 4, 5])==1,'incorrect'
-    assert median([0, 0, 0, 0, 49, 50, 100])==0,'incorrect'
+    assert median([0, 100, 5, 9, 8, 6, 2])==f'lst[5] = 6','incorrect'
+    assert median([0, 1, 1, 1, 3, 4, 5])==f'lst[1] = 1','incorrect'
+    assert median([0, 0, 0, 0, 49, 50, 100])==f'lst[0] = 0','incorrect'
     print('Test: OK\n')
     
 
@@ -20,7 +20,7 @@ def median(lst):
             if lst[m] <= lst[i] and m!=i:
                 r += 1
             if l >= (len(lst) // 2) and r >= (len(lst) // 2):
-                return lst[m]
+                return f'lst[{m}] = {lst[m]}'
             i+=1
         m+=1
     return
@@ -31,5 +31,7 @@ test()
 m = randint(1, 5)
 lst = [randint(0, 50) for i in range(0, (2 * m + 1))]
 
+A=[0,0,0,0,0]
 print(lst)
 print(f'Медиана: {median(lst)}')
+
